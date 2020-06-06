@@ -9,3 +9,10 @@
 	return nil;
 }
 %end
+
+//	iOS 13
+%hook SBHHomeScreenSettings
+-(bool)showWidgets {
+	return NO;
+}
+%end
