@@ -1,3 +1,4 @@
+// iOS 10 - 12
 %hook SBIconController
 -(id)appIconForceTouchController:(id)arg1 applicationShortcutWidgetBundleIdentifierForGestureRecognizer:(id)arg2 {
 	return nil;
@@ -10,9 +11,9 @@
 }
 %end
 
-//	iOS 13
+// iOS 13
 %hook SBHHomeScreenSettings
--(bool)showWidgets {
+-(BOOL)showWidgets {
 	return NO;
 }
 %end

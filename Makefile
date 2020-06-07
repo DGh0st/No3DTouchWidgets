@@ -1,8 +1,7 @@
 export ARCHS = armv7 arm64 arm64e
-export TARGET = iphone:clang::10
+export TARGET = iphone:clang:13.0:10
 
-PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)
-FINAL_PACKAGE = 1
+INSTALL_TARGET_PROCESSES = SpringBoard
 
 include $(THEOS)/makefiles/common.mk
 
@@ -11,5 +10,3 @@ No3DTouchWidgets_FILES = Tweak.xm
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
-after-install::
-	install.exec "killall -9 SpringBoard"
